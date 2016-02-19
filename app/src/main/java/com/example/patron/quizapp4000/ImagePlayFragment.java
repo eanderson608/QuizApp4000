@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -33,7 +34,8 @@ public class ImagePlayFragment extends Fragment {
     private Button nextButton;
     private ImageView dogImage;
     private TextView questionText;
-    private EditText responseEditText;
+    private EditText eText;
+
 
     /**
      * Use this factory method to create a new instance of
@@ -75,11 +77,31 @@ public class ImagePlayFragment extends Fragment {
 
 
         nextButton = (Button) view.findViewById(R.id.next_button);
-        responseEditText = (EditText) view.findViewById(R.id.response_edittext);
-        dogImage = (ImageView) view.findViewById(R.id.dog_imageview);
-        questionText = (TextView) view.findViewById(R.id.question_textview);
 
         return view;
+    }
+
+    @Override
+    public void onViewCreated(final View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        //different way of implementing click interaction.
+        nextButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                final EditText eText = (EditText) view.findViewById(R.id.response_edittext);
+                String text = eText.getText().toString();
+                Toast.makeText(getContext(), "Answer '" + text + "' accepted!", Toast.LENGTH_SHORT).show();
+
+                getFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.main_fragment_container, TextPlayFragment.newInstance(text, null))
+                        .addToBackStack(null)
+                        .commit();
+
+            }
+        });
     }
 
     /**
