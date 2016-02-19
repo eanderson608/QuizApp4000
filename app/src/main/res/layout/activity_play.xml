@@ -7,17 +7,12 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.patron.quizapp4000.MainActivity">
+    tools:context="com.example.patron.quizapp4000.PlayActivity">
 
-    <LinearLayout
+    <FrameLayout
+        android:id="@+id/main_fragment_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+    </FrameLayout>
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="100dip"
-            android:text="PLAY QUIZ!!" />
-
-
-    </LinearLayout>
 </RelativeLayout>
