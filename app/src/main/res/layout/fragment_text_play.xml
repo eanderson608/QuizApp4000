@@ -4,10 +4,64 @@
     android:layout_height="match_parent"
     tools:context="com.example.patron.quizapp4000.TextPlayFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="What was that?"
+            android:textSize="24pt"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/question2_textview"/>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/radio_choice" >
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="A dog"
+                android:id="@+id/radio_dog" />
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="A great dog"
+                android:id="@+id/radio_great_dog" />
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="A hilarious dog"
+                android:id="@+id/radio_hilarious_dog" />
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="A good boy"
+                android:id="@+id/radio_good_boy" />
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="all of the above"
+                android:id="@+id/radio_all_of_the_above" />
+
+
+
+        </RadioGroup>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="GET RESULTS"
+            android:id="@+id/get_results_button"/>
+
+    </LinearLayout>
 
 </FrameLayout>
