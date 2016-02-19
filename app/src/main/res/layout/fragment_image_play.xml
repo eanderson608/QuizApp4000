@@ -4,10 +4,40 @@
     android:layout_height="match_parent"
     tools:context="com.example.patron.quizapp4000.ImagePlayFragment">
 
-    <ImageView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@drawable/dog"/>
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="300dip"
+            android:src="@drawable/dog"
+            android:id="@+id/dog_imageview"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="What is this?"
+            android:textSize="24pt"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/question_textview"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16pt"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/response_edittext" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="NEXT QUESTION"
+            android:id="@+id/next_button"/>
+
+    </LinearLayout>
+
 
 
 </FrameLayout>

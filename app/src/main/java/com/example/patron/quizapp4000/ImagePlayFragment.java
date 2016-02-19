@@ -7,6 +7,10 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -25,6 +29,11 @@ public class ImagePlayFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    private Button nextButton;
+    private ImageView dogImage;
+    private TextView questionText;
+    private EditText responseEditText;
 
     private OnFragmentInteractionListener mListener;
 
@@ -63,7 +72,16 @@ public class ImagePlayFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_image_play, container, false);
+        View view = null;
+        view = inflater.inflate(R.layout.fragment_image_play, container, false);
+
+
+        nextButton = (Button) view.findViewById(R.id.next_button);
+        responseEditText = (EditText) view.findViewById(R.id.response_edittext);
+        dogImage = (ImageView) view.findViewById(R.id.dog_imageview);
+        questionText = (TextView) view.findViewById(R.id.question_textview);
+
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
