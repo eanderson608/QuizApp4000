@@ -16,7 +16,8 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="100dip"
-            android:text="PLAY QUIZ!!" />
+            android:text="PLAY QUIZ!!"
+            android:onClick="playPressed"/>
 
 
     </LinearLayout>

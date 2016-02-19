@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.patron.quizapp4000"
-        minSdkVersion 19
+        minSdkVersion 16
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
@@ -24,4 +24,6 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.1.1'
     compile 'com.android.support:support-v4:23.1.1'
+    compile 'com.google.android.gms:play-services:8.4.0'
+    compile 'com.xgc1986.android:ripplebutton:0.4.1'
 }
