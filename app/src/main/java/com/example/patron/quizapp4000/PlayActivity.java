@@ -12,7 +12,7 @@ public class PlayActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_play);
 
-        getFragmentManager()
+        getSupportFragmentManager()
                 .beginTransaction()
                 .replace(R.id.main_fragment_container, ImagePlayFragment.newInstance(null, null))
                 .addToBackStack(null)

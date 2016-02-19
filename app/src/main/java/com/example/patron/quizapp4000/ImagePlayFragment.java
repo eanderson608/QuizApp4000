@@ -35,12 +35,6 @@ public class ImagePlayFragment extends Fragment {
     private TextView questionText;
     private EditText responseEditText;
 
-    private OnFragmentInteractionListener mListener;
-
-    public ImagePlayFragment() {
-        // Required empty public constructor
-    }
-
     /**
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
@@ -57,6 +51,10 @@ public class ImagePlayFragment extends Fragment {
         args.putString(ARG_PARAM2, param2);
         fragment.setArguments(args);
         return fragment;
+    }
+
+    public ImagePlayFragment() {
+        // Required empty public constructor
     }
 
     @Override
@@ -82,30 +80,6 @@ public class ImagePlayFragment extends Fragment {
         questionText = (TextView) view.findViewById(R.id.question_textview);
 
         return view;
-    }
-
-    // TODO: Rename method, update argument and hook method into UI event
-    public void onButtonPressed(Uri uri) {
-        if (mListener != null) {
-            mListener.onFragmentInteraction(uri);
-        }
-    }
-
-    @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-        if (context instanceof OnFragmentInteractionListener) {
-            mListener = (OnFragmentInteractionListener) context;
-        } else {
-            throw new RuntimeException(context.toString()
-                    + " must implement OnFragmentInteractionListener");
-        }
-    }
-
-    @Override
-    public void onDetach() {
-        super.onDetach();
-        mListener = null;
     }
 
     /**
