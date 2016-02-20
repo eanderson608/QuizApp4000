@@ -16,6 +16,5 @@ public class MainActivity extends AppCompatActivity {
     public void playPressed(View view) {
         Intent intent = new Intent(this, com.example.patron.quizapp4000.PlayActivity.class);
         startActivity(intent);
-
     }
 }

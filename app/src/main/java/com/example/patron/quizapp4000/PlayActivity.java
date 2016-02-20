@@ -14,9 +14,8 @@ public class PlayActivity extends AppCompatActivity {
 
         getSupportFragmentManager()
                 .beginTransaction()
-                .replace(R.id.main_fragment_container, ImagePlayFragment.newInstance(null, null))
+                .replace(R.id.main_fragment_container, ImagePlayFragment.newInstance())
                 .addToBackStack(null)
                 .commit();
-
     }
 }
