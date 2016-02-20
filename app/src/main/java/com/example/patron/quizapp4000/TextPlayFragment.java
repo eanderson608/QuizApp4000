@@ -7,6 +7,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.Button;
 
 
 /**
@@ -26,6 +28,8 @@ public class TextPlayFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    private Button submitButton;
 
     private OnFragmentInteractionListener mListener;
 
@@ -64,7 +68,27 @@ public class TextPlayFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_text_play, container, false);
+
+        View view = null;
+        view = inflater.inflate(R.layout.fragment_text_play, container, false);
+
+        submitButton = (Button) view.findViewById(R.id.get_results_button);
+
+        return view;
+    }
+
+    @Override
+    public void onViewCreated(final View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        //different way of implementing click interaction.
+        submitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+            }
+        });
     }
 
     /**

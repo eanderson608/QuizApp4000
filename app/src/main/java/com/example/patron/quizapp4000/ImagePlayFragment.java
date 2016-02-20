@@ -32,9 +32,6 @@ public class ImagePlayFragment extends Fragment {
     private String mParam2;
 
     private Button nextButton;
-    private ImageView dogImage;
-    private TextView questionText;
-    private EditText eText;
 
 
     /**
@@ -78,6 +75,7 @@ public class ImagePlayFragment extends Fragment {
 
         nextButton = (Button) view.findViewById(R.id.next_button);
 
+
         return view;
     }
 
@@ -92,7 +90,6 @@ public class ImagePlayFragment extends Fragment {
 
                 final EditText eText = (EditText) view.findViewById(R.id.response_edittext);
                 String text = eText.getText().toString();
-                Toast.makeText(getContext(), "Answer '" + text + "' accepted!", Toast.LENGTH_SHORT).show();
 
                 getFragmentManager()
                         .beginTransaction()
