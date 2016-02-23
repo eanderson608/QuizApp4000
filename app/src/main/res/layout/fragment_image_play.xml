@@ -11,13 +11,15 @@
 
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="300dip"
+            android:layout_height="0dp"
+            android:layout_weight="65"
             android:src="@drawable/dog"
             android:id="@+id/dog_imageview"/>
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="15"
             android:text="What is this?"
             android:textSize="24pt"
             android:layout_gravity="center_horizontal"
@@ -28,13 +30,16 @@
             android:layout_height="wrap_content"
             android:textSize="16pt"
             android:layout_gravity="center_horizontal"
+            android:inputType="text"
+            android:imeOptions="actionDone"
             android:id="@+id/response_edittext" />
 
         <Button
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="0dp"
             android:text="NEXT QUESTION"
-            android:id="@+id/next_button"/>
+            android:id="@+id/next_button"
+            android:layout_weight="10"/>
 
     </LinearLayout>
 
