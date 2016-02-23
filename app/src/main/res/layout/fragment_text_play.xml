@@ -12,7 +12,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="0dp"
-            android:layout_weight="20"
+            android:layout_weight="15"
             android:text="What was that?"
             android:textSize="24pt"
             android:layout_gravity="center_horizontal"
@@ -22,36 +22,41 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/radio_choice"
-            android:layout_weight="60">
+            android:layout_weight="65" >
 
             <RadioButton
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="A dog"
+                android:textSize="11pt"
                 android:id="@+id/radio_dog" />
 
             <RadioButton
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="A great dog"
+                android:textSize="11pt"
                 android:id="@+id/radio_great_dog" />
 
             <RadioButton
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="A hilarious dog"
+                android:textSize="11pt"
                 android:id="@+id/radio_hilarious_dog" />
 
             <RadioButton
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="A good boy"
+                android:textSize="11pt"
                 android:id="@+id/radio_good_boy" />
 
             <RadioButton
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="all of the above"
+                android:textSize="11pt"
                 android:id="@+id/radio_all_of_the_above" />
 
         </RadioGroup>
